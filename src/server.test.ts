@@ -2,12 +2,12 @@ import request, { Response } from 'supertest';
 import path from 'path';
 import dotenv from 'dotenv';
 import server from './server';
-dotenv.config({ 
+dotenv.config({
   path: path.resolve(__dirname, '../.env.test')
 });
 
 describe('Server tests...',() => {
-  
+
   /**
    *  Initial server test
    */
