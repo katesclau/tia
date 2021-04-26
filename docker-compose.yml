@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   mongodb_container:
-    container_name: ${ENV}
+    container_name: "${ENV}-mongodb"
     image: mongo:latest
     restart: always
     environment:

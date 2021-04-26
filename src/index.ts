@@ -5,7 +5,7 @@ dotenv.config({
 });
 
 import server from './server';
-const port = parseInt(process.env.PORT || "8000");
+const port = parseInt(process.env.PORT || "8000", 10);
 
 server.listen(port, async () => {
   console.log(`[server]: Server is running at https://localhost:${port}`);

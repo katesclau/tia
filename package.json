@@ -4,7 +4,7 @@
   "description": "Tia Node/Express/Mongo test",
   "main": "lib/index.js",
   "scripts": {
-    "pretest": "yarn dotenv -e .env.test ./start_db.sh",
+    "pretest": "yarn dotenv -e .env ./start_db.sh",
     "db:local:start": "yarn dotenv -e .env ./start_db.sh",
     "db:local:stop": "yarn dotenv -e .env ./stop_db.sh",
     "test": "jest",

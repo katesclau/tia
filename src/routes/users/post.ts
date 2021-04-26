@@ -9,8 +9,9 @@ export default async (req: Request, res: Response) => {
   if (error) {
     res.status(400);
     res.send(error);
+    return;
   }
-  
+
   await  new Promise<void>((resolve, _reject) => {
     user.save((err: any) => {
       if (err) console.log(err);
@@ -18,6 +19,7 @@ export default async (req: Request, res: Response) => {
       resolve();
   })});
 
+  res.type('application/json')
   res.status(201);
   res.send(JSON.stringify(user, null, 2));
 }
